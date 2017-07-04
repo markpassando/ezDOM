@@ -9,7 +9,7 @@
   <body>
     <section>
       <h1 class="last warriors pg" id="curry" data-name="curry" >jq blah</h1>
-
+      <input id="my-input" type="text" value="My Sample" />
       <ul>
         <li class="cat">a</li>
         <li>b</li>
@@ -31,15 +31,15 @@
 
     <script>
     $ez(() => {
-      $ez('ul').on('click', () => alert('clicked1'));
+      // $ez('ul').on('click', () => alert('clicked1'));
 
       $ez.ajax({
-      method: "GET",
-      url:  "http://api.openweathermap.org/data/2.5/weather",
-      data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
-              success(data) {
-                console.log(data);
-              }
+        method: "GET",
+        url:  "http://api.openweathermap.org/data/2.5/weather",
+        data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
+        success(data) {
+          console.log(data);
+        }
       });
 
     });
