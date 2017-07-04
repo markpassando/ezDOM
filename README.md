@@ -21,21 +21,21 @@ Include the ez_dom.js library in your source code.
   * [`parents`](#parent)
 
 ### DOM Manipulation
-  * html
-  * empty
-  * append
-  * remove
-  * attr
-  * addClass
-  * removeClass
-  * toggleClass
+  * [`html`](#html)
+  * [`empty`](#empty)
+  * [`append`](#append)
+  * [`remove`](#remove)
+  * [`attr`](#attr)
+  * [`addClass`](#addClass)
+  * [`removeClass`](#removeClass)
+  * [`toggleClass`](#toggleClass)
 
 ### Event Listeners
-  * on
-  * off
+  * [`on`](#on)
+  * [`off`](#off)
 
 ### ajax
-  * $ez.ajax
+  * [`$ez.ajax`](#$ez.ajax)
 
 ## Features
 ### `each`
