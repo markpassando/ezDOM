@@ -26,9 +26,9 @@ Include the ez_dom.js library in your source code.
   * [`append`](#append)
   * [`remove`](#remove)
   * [`attr`](#attr)
-  * [`addClass`](#addClass)
-  * [`removeClass`](#removeClass)
-  * [`toggleClass`](#toggleClass)
+  * [`addClass`](#addclass)
+  * [`removeClass`](#removeclass)
+  * [`toggleClass`](#toggleclass)
 
 ### Event Listeners
   * [`on`](#on)
