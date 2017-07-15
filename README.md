@@ -17,7 +17,7 @@ Include the ez_dom.js library in your source code like so.
 
 ### DOM Traversal
   * [`children`](#children)
-  * [`parent`](#parents)
+  * [`parent`](#parent)
   * [`each`](#each)
 
 ### DOM Manipulation
