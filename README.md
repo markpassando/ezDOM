@@ -4,7 +4,7 @@ ezDOM or `$ez` for short, is a JavaScript DOM interaction library drawing inspir
 
 ## Getting Started
 
-Include the ez_dom.js library in your source code.
+Include the ez_dom.js library in your source code like so.
 ```html
 <head>
   <meta charset="utf-8">
@@ -15,10 +15,10 @@ Include the ez_dom.js library in your source code.
 
 ## Feature List
 
-### [DOM Traversal](#dom-traversal)
-  * [`each`](#each)
+### DOM Traversal
   * [`children`](#children)
-  * [`parents`](#parent)
+  * [`parent`](#parents)
+  * [`each`](#each)
 
 ### DOM Manipulation
   * [`html`](#html)
@@ -35,12 +35,16 @@ Include the ez_dom.js library in your source code.
   * [`off`](#off)
 
 ### ajax
-  * [`$ez.ajax`](#$ez.ajax)
+  * [`ajax`](#ajax)
 
 ## Features
-### `each`
 ### `children`
-### `parents`
+  `$('ul').children()` - Grabs all of the selected elements immediate children into a collection of an `$ez` object.
+### `parent`
+  `$('li').parent()` - Grabs all unique parents of the selected element and returns a collection of an `$ez` object.
+### `each`
+  `each(callback)` - takes a callback function to invoke on each element.
+  `$('ul').children().each(el => console.log(el))` - Will grab each child element in the ul and console log each child.
 
 ## DOM Manipulation
 ### `html`
@@ -52,7 +56,7 @@ Include the ez_dom.js library in your source code.
   `$ez('#my-el').empty()` - sets `#my-el` innerHtml to an empty string.
 
 ### `append`
-  `append(string/HTMLElement/$ez object)` - Can take a string, a HTMLElement or an $ez object.
+  `append(string/HTMLElement/$ez object)`js - Can take a string, a HTMLElement or an $ez object.
   string parameter
   `$ez('#my-el').append('foo')` - appends 'foo' to the inside of `#my-el`.
   HTMLElement
@@ -92,13 +96,23 @@ Include the ez_dom.js library in your source code.
 
 ## ajax
 ### `$ez.ajax`
-````$ez.ajax({
-  method: "GET",
-  url:  "http://api.openweathermap.org/data/2.5/weather",
-  data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
-  success(data) {
-    console.log(data);
-  }
-});
+````js
+$ez.ajax({
+   method: "GET",
+   url:  "http://api.openweathermap.org/data/2.5/weather",
+   data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
+   success: response => {
+     console.log("Return the Response!");
+     console.log(response);
+   },
+   error: error => {
+     console.log("Return the Error!");
+     console.log(error);
+   }
+ });
 ````
-Takes a JSON object
+The example above shows an example getting weather from openweathermap API.
+
+`$ez.ajax` takes a JSON object with the following parameters 'method', 'url', 'data', 'success' and 'error'
+
+If the API call is successful it will callback the function passed to success otherwise it will call the error function.
