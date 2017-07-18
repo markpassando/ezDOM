@@ -4,45 +4,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/bundle.js"></script>
     <meta charset="utf-8">
-    <title></title>
+    <title>ezDOM | To Do Demo</title>
+    <link rel="stylesheet" type="text/css" href="demo/styles.css">
   </head>
   <body>
-    <section>
-      <h1 class="last warriors pg" id="curry" data-name="curry" >jq blah</h1>
-      <input id="my-input" type="text" value="My Sample" />
-      <ul id="ul">
-        <li class="cat">a</li>
-        <li>b</li>
-        <li>c</li>
-        <li><ul>
-          <li>nested</li>
-        </ul></li>
-      </ul>
+    <article>
+      <h1>ezDOM | Widgets</h1>
+      <section>
+        <h2><i class="fa fa-cloud" aria-hidden="true"></i> Weather Widget</h2>
+        <strong><i class="fa fa-search" aria-hidden="true"></i> Search a City</strong>
+        <form>
+          <input type="text" id="weather-input" value="" placeholder="Enter a City"/>
+          <input type="submit" value="Search" id="weather-submit" />
+        </form>
+        <div id="weather">
+        </div>
+      </section>
 
-      <form class="" action="index.html" method="post">
-        <label for="cat_color">Color</label>
-          <select name="cat[color]" id="cat_color">
-            <option>Cat 1</option>
-              <option class="cattwo" id="cat2" selected="selected">Cat 2</option>
-              <option>Cat 3</option>
-          </select>
-      </form>
-    </section>
+      <section>
+        <h2><i class="fa fa-list-ul" aria-hidden="true"></i> To Do Widget</h2>
+        <ul id="todo-list">
+          <li id="todo-0"><div>Do the dishes</div><div><button type="button" class="todo-complete" id="0">Mark as Complete</button><div></li>
+          <li id="todo-1"><div>Throw out the garbage</div><div><button type="button" class="todo-complete" id="1">Mark as Complete</button><div></li>
+          <li id="todo-2"><div>Create Weather Demo for ezDOM</div><div><button type="button" class="todo-complete" id="2">Mark as Complete</button><div></li>
+          <li id="todo-3"><div>Create To Do Demo for ezDOM</div><div><button type="button" class="todo-complete" id="3">Mark as Complete</button><div></li>
+          <li id="todo-4"><div>Refactor the code</div><div><button type="button" class="todo-complete" id="4">Mark as Complete</button><div></li>
+        </ul>
 
-    <script>
-    $ez(() => {
-      // $ez('ul').on('click', () => alert('clicked1'));
+        <strong><i class="fa fa-plus-circle" aria-hidden="true"></i> Add a To Do</strong>
+        <form>
+          <input type="text" id="todo-input" value="" />
+          <input type="submit" value="Add" id="todo-submit" />
+        </form>
+      </section>
+    </article>
 
-      $ez.ajax({
-        method: "GET",
-        url:  "http://api.openweathermap.org/data/2.5/weather",
-        data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
-        success(data) {
-          console.log(data);
-        }
-      });
-
-    });
-    </script>
+  <script src="demo/demo.js"></script>
+  <script src="https://use.fontawesome.com/f660b6bdba.js"></script>
   </body>
 </html>
