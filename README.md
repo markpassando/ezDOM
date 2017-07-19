@@ -4,6 +4,10 @@ ezDOM or `$ez` for short, is a JavaScript DOM interaction library drawing inspir
 
 ## Live Demo
 ![ezDOM Widgets Demo](demo/widgets-demo.jpg)
+
+ezDOM Widgets displays nearly all the functionality of ezDOM.
+Including methods (selector, children, append, remove, empty, attr, toggleClass and ajax)
+
 [See ezDOM in action with a live Widget Demo](http://markpassando.com/ezDOM)
 
 ## Getting Started
