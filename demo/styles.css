@@ -34,11 +34,26 @@ h1 {
   margin: 0;
 }
 
+.widget-header {
+  background-color: #6f7e95;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.widget-header i {
+  color: #fff;
+  cursor: pointer;
+}
+
+.widget-header .fa-caret-down {
+  font-size: 22px;
+}
+
 h2 {
   margin: 0;
-  background-color: #6f7e95;
   color: #ecf1f5;
-  padding: 15px;
   font-size: 20px;
   font-weight: 100;
 }
@@ -160,4 +175,8 @@ ul li {
 
 ul li:hover {
   background-color: #ecf1f5;
+}
+
+.hidden {
+  display: none;
 }

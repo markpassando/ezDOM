@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/bundle.js"></script>
     <meta charset="utf-8">
-    <title>ezDOM | To Do Demo</title>
+    <title>ezDOM | Widget Demo</title>
     <link rel="stylesheet" type="text/css" href="demo/normalizer.css">
     <link rel="stylesheet" type="text/css" href="demo/styles.css">
   </head>
@@ -28,11 +28,14 @@
     <article class="container">
       <p>The Weather Widget uses ezDOM's ajax method to query openWeatherMap's API by city name.</p>
       <section>
-        <h2><i class="fa fa-cloud" aria-hidden="true"></i> Weather Widget</h2>
-        <div class="contents-box">
+        <div class="widget-header">
+          <h2><i class="fa fa-cloud" aria-hidden="true"></i> Weather Widget</h2>
+          <i id="toggle-weather" class="fa fa-minus" aria-hidden="true"></i>
+        </div>
+        <div id="weather-box" class="contents-box">
           <strong><i class="fa fa-search" aria-hidden="true"></i> Search Weather by City Name</strong>
           <form>
-            <input type="text" id="weather-input" value="" placeholder="Enter a City"/>
+            <input type="text" id="weather-input" value="" placeholder="Enter a City..."/>
             <input type="submit" value="Search" id="weather-submit" />
           </form>
           <div id="weather">
@@ -42,20 +45,27 @@
 
       <p>The To Do Widget uses ezDOM's selector, on event handler, append and remove methods.</p>
       <section>
-        <h2><i class="fa fa-list-ul" aria-hidden="true"></i> To Do Widget</h2>
-        <ul id="todo-list">
-          <li id="todo-0"><div>Do the dishes</div><div><button type="button" class="todo-complete" id="0">Mark as Complete</button><div></li>
-          <li id="todo-1"><div>Throw out the garbage</div><div><button type="button" class="todo-complete" id="1">Mark as Complete</button><div></li>
-          <li id="todo-2"><div>Create Weather Demo for ezDOM</div><div><button type="button" class="todo-complete" id="2">Mark as Complete</button><div></li>
-          <li id="todo-3"><div>Create To Do Demo for ezDOM</div><div><button type="button" class="todo-complete" id="3">Mark as Complete</button><div></li>
-          <li id="todo-4"><div>Refactor the code</div><div><button type="button" class="todo-complete" id="4">Mark as Complete</button><div></li>
-        </ul>
+        <div class="widget-header">
+          <h2><i class="fa fa-list-ul" aria-hidden="true"></i> To Do Widget</h2>
+          <i id="toggle-todo" class="fa fa-minus" aria-hidden="true"></i>
+        </div>
 
-        <strong><i class="fa fa-plus" aria-hidden="true"></i> Add a To Do</strong>
-        <form>
-          <input type="text" id="todo-input" value="" />
-          <input type="submit" value="Add" id="todo-submit" />
-        </form>
+        <div id="todo-box">
+          <ul id="todo-list">
+            <li id="todo-0"><div>Do the dishes</div><div><button type="button" class="todo-complete" id="0">Mark as Complete</button><div></li>
+            <li id="todo-1"><div>Throw out the garbage</div><div><button type="button" class="todo-complete" id="1">Mark as Complete</button><div></li>
+            <li id="todo-2"><div>Create Weather Demo for ezDOM</div><div><button type="button" class="todo-complete" id="2">Mark as Complete</button><div></li>
+            <li id="todo-3"><div>Create To Do Demo for ezDOM</div><div><button type="button" class="todo-complete" id="3">Mark as Complete</button><div></li>
+            <li id="todo-4"><div>Refactor the code</div><div><button type="button" class="todo-complete" id="4">Mark as Complete</button><div></li>
+          </ul>
+
+          <strong><i class="fa fa-plus" aria-hidden="true"></i> Add a To Do</strong>
+          <form>
+            <input type="text" id="todo-input" value="" placeholder="What to do..." />
+            <input type="submit" value="Add" id="todo-submit" />
+          </form>
+        </div>
+
       </section>
     </article>
 

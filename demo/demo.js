@@ -72,4 +72,17 @@ $ez(() => {
     $ez(`#todo-${todoId}`).remove();
   });
 
+  // Menu Dropdowns
+  $ez('#toggle-weather').on('click', (e) => {
+    $ez('#weather-box').toggleClass('hidden');
+    $ez('#toggle-weather').toggleClass('fa-caret-down');
+    $ez('#toggle-weather').toggleClass('fa-minus');
+  });
+
+  $ez('#toggle-todo').on('click', (e) => {
+    $ez('#todo-box').toggleClass('hidden');
+    $ez('#toggle-todo').toggleClass('fa-caret-down');
+    $ez('#toggle-todo').toggleClass('fa-minus');
+  });
+
 });
