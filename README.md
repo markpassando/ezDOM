@@ -2,6 +2,10 @@
 
 ezDOM or `$ez` for short, is a JavaScript DOM interaction library drawing inspiration from jQuery.
 
+## Live Demo
+![ezDOM Widgets Demo](demo/widgets-demo.jpg)
+[See ezDOM in action with a live Widget Demo](http://markpassando.com/ezDOM)
+
 ## Getting Started
 
 Include the ez_dom.js library in your source code like so.
