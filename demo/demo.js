@@ -16,9 +16,9 @@ $ez(() => {
         const response = JSON.parse(data);
         const temp = Math.round((response.main.temp - 273.15) * 9/5 + 32);
         $ez('#weather').empty();
-        $ez('#weather').append(`<div>${response.name}</div>`);
-        $ez('#weather').append(`<div>${temp} &deg; F</div>`);
-        $ez('#weather').append(`<div>Forecast: ${response.weather[0].main}</div>`);
+        $ez('#weather').append(`<div class="city">${response.name}</div>`);
+        $ez('#weather').append(`<div class="temp">${temp} &deg; F</div>`);
+        $ez('#weather').append(`<div class="forecast">Forecast: ${response.weather[0].main}</div>`);
 
       },
       error(err) {
@@ -59,9 +59,9 @@ $ez(() => {
       const response = JSON.parse(data);
       const temp = Math.round((response.main.temp - 273.15) * 9/5 + 32);
 
-      $ez('#weather').append(`<div>${response.name}</div>`);
-      $ez('#weather').append(`<div>${temp} &deg; F</div>`);
-      $ez('#weather').append(`<div>Forecast: ${response.weather[0].main}</div>`);
+      $ez('#weather').append(`<div class="city">${response.name}</div>`);
+      $ez('#weather').append(`<div class="temp">${temp} &deg; F</div>`);
+      $ez('#weather').append(`<div class="forecast">Forecast: ${response.weather[0].main}</div>`);
 
     }
   });

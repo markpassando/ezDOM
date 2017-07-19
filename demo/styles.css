@@ -1,0 +1,157 @@
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: linear-gradient(#526b7f, #3e606a);
+  background-attachment: fixed;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.icon-box {
+  display: flex;
+  margin: 0 auto;
+  font-size: 25px;
+  max-width: 130px;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.icon-box a {
+  color: #50b6c2;
+}
+
+.icon-box a:hover {
+  color: #354052;
+}
+
+h1 {
+  text-align: center;
+  color: #354052;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  background-color: #6f7e95;
+  color: #ecf1f5;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+article {
+  background-color: #ecf1f5;
+  box-sizing: border-box;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contents-box {
+  padding: 15px;
+}
+
+strong {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+
+section {
+  background-color: #fff;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+input {
+  border: 1px solid #ecf1f5;
+  margin: 0;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background-color: #50b6c2;
+  color: #fff;
+  border: 1px solid #50b6c2;
+}
+
+input[type="submit"]:hover {
+  background-color: #6f7e95;
+  border: 1px solid #6f7e95;
+}
+
+input[type="text"] {
+  flex: 1;
+}
+
+
+/*Weather*/
+#weather {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 140px;
+}
+
+.city {
+  font-size: 1.8em;
+  color: #33b2b8;
+}
+
+.temp {
+  font-size: 2em;
+  color: #354052;
+}
+
+.forecast {
+  color: #6f7e95;
+}
+
+button {
+  background-color: #00ac8b;
+  border: none;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #008168;
+}
+
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ecf1f5;
+}
+
+ul li:hover {
+  background-color: #ecf1f5;
+}
